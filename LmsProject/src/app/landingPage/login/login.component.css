@@ -1,2 +1,13 @@
-
+body {
+  font-family: 'Inter', sans-serif;
+ 
+  background-size: cover;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+.login-container {
+  background: rgba(234, 226, 226, 0.7);
+  backdrop-filter: blur(12px);
+ 
+ } 
 
