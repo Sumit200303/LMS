@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonEngine } from '@angular/ssr';
+import { TeacherService } from './teacher.service';
 
 @Component({
   selector: 'app-teacher-registration',
@@ -12,27 +13,27 @@ import { CommonEngine } from '@angular/ssr';
 })
 export class TeacherRegistrationComponent {
 
-  teacher = {
+teacher = {
     name: '',
     email: '',
     password: '',
     address: '',
-    qualification: '',
+    qualification: ''
   };
 
+  constructor(private teacherService: TeacherService) {}
+
   registerTeacher() {
-    if (!this.teacher.name || !this.teacher.email || !this.teacher.password || !this.teacher.address || !this.teacher.qualification) {
-      alert('Please fill all fields!');
-      return;
-    }
-
-    // TODO: call your registration API here
-
-    console.log('Teacher Registration Data:', this.teacher);
-    alert('Teacher Registered Successfully!');
-
-    // Reset form after registration
-    this.teacher = { name: '', email: '', password: '', address: '', qualification: '' };
+    this.teacherService.registerTeacher(this.teacher).subscribe({
+      next: (res) => {
+        alert('Teacher registered successfully!');
+        console.log(res);
+      },
+      error: (err) => {
+        alert('Registration failed.');
+        console.error(err);
+      }
+    });
   }
 
 
