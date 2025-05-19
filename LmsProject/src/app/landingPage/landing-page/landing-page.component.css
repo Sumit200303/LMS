@@ -20,12 +20,12 @@ body {
 
 /* Hero Section */
 .hero {
-  max-width: 1800px;           /* increased max width */
+  max-width: 1900px;           /* increased max width */
   padding: 5rem 4rem;          /* more padding */
   background: rgba(255, 255, 255, 0.1);
   /* backdrop-filter: blur(10px); */
   /* -webkit-backdrop-filter: blur(10px); */
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
   text-align: center;
   margin-bottom: 3rem;
@@ -35,7 +35,7 @@ body {
 .hero-content h1 {
   font-size: 3.6rem;           /* bigger heading */
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 300;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -55,7 +55,7 @@ body {
 .landing-container h1 {
   font-size: 2.2rem;
   margin-bottom: 0.8rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .landing-container p {
