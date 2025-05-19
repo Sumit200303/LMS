@@ -1,0 +1,113 @@
+.teacher-registration-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+  color: #fff;
+  font-weight: 500;
+}
+
+.teacher-registration-container h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #ffd700;
+  text-align: center;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.teacher-registration-container label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.teacher-registration-container input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-registration-container input::placeholder {
+  color: #ddd;
+}
+
+.teacher-registration-container input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px #ffd700;
+  color: #333;
+}
+
+.teacher-registration-container button {
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  background: #ffd700;
+  border: none;
+  border-radius: 50px;
+  color: #333;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ffd700;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.teacher-registration-container button:hover {
+  background: #e6c200;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teacher-registration-container {
+    padding: 2.5rem 2rem;
+    max-width: 90%;
+  }
+
+  .teacher-registration-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .teacher-registration-container input {
+    font-size: 1.1rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .teacher-registration-container button {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-registration-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .teacher-registration-container h2 {
+    font-size: 2rem;
+  }
+
+  .teacher-registration-container input {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .teacher-registration-container button {
+    font-size: 1.1rem;
+    padding: 0.9rem 0;
+  }
+}

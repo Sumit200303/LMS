@@ -1,0 +1,21 @@
+<div class="teacher-registration-container">
+<h2>Teacher Registration</h2>
+<form>
+  <label for="FullName">Name</label>
+  <input type="text" [(ngModel)]="teacher.name" id="FullName" name="name" required>
+
+  <label for="Email">Email</label>
+  <input  type="email" [(ngModel)]="teacher.email" id="Email" name="email" required>
+
+  <label for="password">Password</label>
+  <input type="password" [(ngModel)]="teacher.password" id="password" name="password" required>
+
+  <label for="addres">Address</label>
+  <input type="text" [(ngModel)]="teacher.address" id="addres" name="address" required>
+
+  <label for="Qli">Qualification</label>
+  <input type="text" [(ngModel)]="teacher.qualification" id="Qli" name="qualification" required>
+
+  <button (click)="registerTeacher()">Register</button>
+</form>
+</div>
