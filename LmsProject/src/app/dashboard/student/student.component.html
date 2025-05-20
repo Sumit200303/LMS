@@ -1,10 +1,69 @@
-<div class="dashboard-container">
-     <button class="logout-btn" (click)="logout()">Logout</button>
-  <h2>Welcome, Student</h2>
-  <div class="cards">
-    <div class="card">Enrolled Courses: 5</div>
-    <div class="card">Assignments Due: 2</div>
-    <div class="card">Grades: A, B+</div>
-    <div class="card">Messages from Teachers: 3</div>
+
+
+<main class="main">
+  <div class="container mt-5">
+  <h2 class="mb-4 text-center">📚 Student Dashboard</h2>
+
+  <!-- Profile Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">👤 Your Profile</h5>
+    </div>
+    <div class="card-body">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> johndoe&#64;example.com</p>
+      <p><strong>Address:</strong> Pune, India</p>
+    </div>
+  </div>
+
+  <!-- Enrolled Courses -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">✅ Enrolled Courses</h5>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">Angular Fundamentals</li>
+        <li class="list-group-item">ASP.NET Core Web API</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Available Courses -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">📘 Available Courses</h5>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          SQL Basics
+          <button class="btn btn-sm btn-primary">Enroll</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          JavaScript Advanced
+          <button class="btn btn-sm btn-primary">Enroll</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Assignments -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">📝 Assignments</h5>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item">
+          Assignment 1 - Due: May 25, 2025
+        </li>
+        <li class="list-group-item">
+          Assignment 2 - Due: June 1, 2025
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
+
+</main>
