@@ -1,36 +1,22 @@
+// admin-dashboard.component.ts
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ApproveUsersComponent } from '../../Approve/approve-user/approve-user.component';
+
 import { StudentCrudComponent } from '../../Crud/student-crud/student-crud.component';
 import { TeacherCrudComponent } from '../../Crud/teacher-crud/teacher-crud.component';
-
+import { ApproveUserComponent } from "../../Approve/apporve-user/apporve-user.component";
 
 @Component({
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-  ApproveUsersComponent,
-  StudentCrudComponent,
-  TeacherCrudComponent
-  ],
   selector: 'app-admin',
+  standalone: true,
+  imports: [CommonModule, StudentCrudComponent, TeacherCrudComponent, ApproveUserComponent],
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
   currentView: 'approve' | 'student-crud' | 'teacher-crud' = 'approve';
 
-  showApproveUsers() {
-    this.currentView = 'approve';
-  }
-
-  showStudentCrud() {
-    this.currentView = 'student-crud';
-  }
-
-  showTeacherCrud() {
-    this.currentView = 'teacher-crud';
+  showView(view: 'approve' | 'student-crud' | 'teacher-crud') {
+    this.currentView = view;
   }
 }

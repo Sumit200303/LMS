@@ -1,18 +1,19 @@
+<!-- admin-dashboard.component.html -->
 <h1>Admin Dashboard</h1>
 <nav>
-  <button (click)="showApproveUsers()">Approve Users</button>
-  <button (click)="showStudentCrud()">Student CRUD</button>
-  <button (click)="showTeacherCrud()">Teacher CRUD</button>
+  <button (click)="showView('approve')">Approve Users</button>
+  <button (click)="showView('student-crud')">Student CRUD</button>
+  <button (click)="showView('teacher-crud')">Teacher CRUD</button>
 </nav>
 
-<section *ngIf="currentView === 'approve'">
-  <app-approve-users></app-approve-users>
-</section>
+<div *ngIf="currentView === 'approve'">
+ <app-approve-user></app-approve-user>
+</div>
 
-<section *ngIf="currentView === 'student-crud'">
+<div *ngIf="currentView === 'student-crud'">
   <app-student-crud></app-student-crud>
-</section>
+</div>
 
-<section *ngIf="currentView === 'teacher-crud'">
+<div *ngIf="currentView === 'teacher-crud'">
   <app-teacher-crud></app-teacher-crud>
-</section>
+</div>
