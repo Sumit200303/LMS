@@ -6,6 +6,9 @@ import { AdminComponent } from './dashboard/admin/admin.component';
 import { TeacherComponent } from './dashboard/teacher/teacher.component';
 import { StudentComponent } from './dashboard/student/student.component';
 import { LoginComponent } from './landingPage/login/login.component';
+import { ApproveUsersComponent } from './Approve/approve-user/approve-user.component';
+import { StudentCrudComponent } from './Crud/student-crud/student-crud.component';
+import { TeacherCrudComponent } from './Crud/teacher-crud/teacher-crud.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -26,5 +29,15 @@ export const routes: Routes = [
   component: StudentComponent
 },
 
+  {path:'approve', component:ApproveUsersComponent},
+
+    {path:'student-crud', component:StudentCrudComponent},
+
+  {path:'teacher-crud', component:TeacherCrudComponent},
+
+
   { path: '**', redirectTo: '' }
+
+
+
 ];

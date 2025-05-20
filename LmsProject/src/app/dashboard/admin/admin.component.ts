@@ -1,18 +1,36 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ApproveUsersComponent } from '../../Approve/approve-user/approve-user.component';
+import { StudentCrudComponent } from '../../Crud/student-crud/student-crud.component';
+import { TeacherCrudComponent } from '../../Crud/teacher-crud/teacher-crud.component';
+
 
 @Component({
-  selector: 'app-admin',
   standalone: true,
-  imports: [RouterModule],  
+  imports: [
+    CommonModule,
+    RouterModule,
+  ApproveUsersComponent,
+  StudentCrudComponent,
+  TeacherCrudComponent
+  ],
+  selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
-  constructor(private router: Router) {}
+  currentView: 'approve' | 'student-crud' | 'teacher-crud' = 'approve';
 
-  logout() {
-    this.router.navigate(['/login']);
+  showApproveUsers() {
+    this.currentView = 'approve';
+  }
+
+  showStudentCrud() {
+    this.currentView = 'student-crud';
+  }
+
+  showTeacherCrud() {
+    this.currentView = 'teacher-crud';
   }
 }
