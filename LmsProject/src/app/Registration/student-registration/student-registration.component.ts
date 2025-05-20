@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class StudentRegistrationComponent {
   student = {
-    name: '',
-    email: '',
-    password: '',
-    address: '',
+    Name: "",
+  EmailId: "",
+  Password: "",
+  Address: ""
   };
 
   errorMessage = '';
@@ -27,20 +27,22 @@ export class StudentRegistrationComponent {
     this.errorMessage = '';
     this.successMessage = '';
 
-    if (!this.student.name || !this.student.email || !this.student.password || !this.student.address) {
+    if (!this.student.Name || !this.student.EmailId || !this.student.Password || !this.student.Address) {
       this.errorMessage = 'Please fill all the fields.';
       return;
     }
 
     // Call backend API (adjust URL)
-    this.http.post('https://your-backend-url/api/students', this.student).subscribe({
-      next: (response) => {
-        this.successMessage = 'Registration successful!';
-        this.student = { name: '', email: '', password: '', address: '' }; // reset form
-      },
-      error: (error: HttpErrorResponse) => {
-        this.errorMessage = error.error?.message || 'Something went wrong. Please try again.';
-      },
-    });
+  this.http.post('https://localhost:7186/api/Student', this.student, { responseType: 'text' })
+  .subscribe({
+    next: (res) => {
+      this.successMessage = res; // res is plain text here
+      this.student = { Name: '', EmailId: '', Password: '', Address: '' };
+    },
+    error: (err: HttpErrorResponse) => {
+      this.errorMessage = err.error || 'Registration failed.';
+    }
+  });
+
   }
 }

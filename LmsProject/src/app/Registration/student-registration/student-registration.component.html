@@ -3,16 +3,16 @@
 
   <form (ngSubmit)="registerStudent()" #studentForm="ngForm" novalidate>
     <label for="name">Full Name</label>
-    <input id="name" name="name" [(ngModel)]="student.name" required />
+    <input id="name" name="name" [(ngModel)]="student.Name" required />
 
     <label for="email">Email</label>
-    <input id="email" name="email" type="email" [(ngModel)]="student.email" required />
+    <input id="email" name="email" type="email" [(ngModel)]="student.EmailId" required />
 
     <label for="password">Password</label>
-    <input id="password" name="password" type="password" [(ngModel)]="student.password" required />
+    <input id="password" name="password" type="password" [(ngModel)]="student.Password" required />
 
     <label for="address">Address</label>
-    <input id="address" name="address" [(ngModel)]="student.address" required />
+    <input id="address" name="address" [(ngModel)]="student.Address" required />
 
     <button type="submit">Register</button>
 
